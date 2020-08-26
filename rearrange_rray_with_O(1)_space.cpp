@@ -1,5 +1,5 @@
 /*
-Given an array arr[] of size N where every element is in the range from 0 to n-1. Rearrange the given array so that arr[i] becomes arr[arr[i]].
+**Given an array arr[] of size N where every element is in the range from 0 to n-1. Rearrange the given array so that arr[i] becomes arr[arr[i]].**
 
 Example 1:
 
@@ -34,7 +34,7 @@ Constraints:
 0 <= Arr[i] < N
 */
 //code goes here
-#include<bits/stdc++.h>
+`#include<bits/stdc++.h>
 using namespace std;
 
 
@@ -84,4 +84,4 @@ int main(){
         cout<<endl;
     }
     return 0;
-}  // } Driver Code Ends
+} ` // } Driver Code Ends
