@@ -2,8 +2,13 @@
 
 Given an array arr[] of N non-negative integers representing the height of blocks at index i as Ai where the width of each block is 1. Compute how much water can be trapped in between blocks after raining.
 The structure is like below:
+      |
+|     |
+|   | |
+|_ _|_|
+Bars for input {3,0,0,2,0,4}
+Total trapped water 3+3+1+3=10
 
-We can trap 2 units of water in the middle gap.
 
 Example 1:
 
