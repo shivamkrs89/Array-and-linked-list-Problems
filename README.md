@@ -1,5 +1,5 @@
 # Array-Problems
-This repository consists of some classical problems based on array solved by me which are asked in interviews of Tech Giants Like *MICROSOFT,amazon,Google,GM SAchs etc
+This repository consists of some classical problems based on array solved by me which are asked in interviews of Tech Giants Like  MICROSOFT,amazon,Google,GM Sachs etc.
 * Mountain subarray problem ***
 * Stickler Thief ***
 * Trapping rain water **
