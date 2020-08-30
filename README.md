@@ -10,5 +10,7 @@ This repository consists of some classical problems based on array solved by me 
 * Maximum circular subarray ****
 * Kadane's Algorithm ***
 * Wave array problem * 
+* Missing number in an array * 
+* Smallest missing number * 
 
 //I will try to update soon
