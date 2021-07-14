@@ -1,0 +1,91 @@
+Given a two-dimensional integer list intervals representing unsorted inclusive intervals, return their union in sorted order.
+
+Constraints
+
+    n ≤ 100,000 where n is the length of intervals
+
+Example 1
+Input
+
+intervals = [
+    [0, 5],
+    [4, 6]
+]
+
+Output
+
+[
+    [0, 6]
+]
+
+Example 2
+Input
+
+intervals = [
+    [1, 2],
+    [3, 4]
+]
+
+Output
+
+[
+    [1, 2],
+    [3, 4]
+]
+
+Example 3
+Input
+
+intervals = [
+    [5, 6],
+    [1, 2]
+]
+
+Output
+
+[
+    [1, 2],
+    [5, 6]
+]
+
+//code goes here
+
+bool mycmp(vector<int> &v1,vector<int> &v2)
+{
+    if(v1[0]==v2[0])
+    return v1[1]<v2[1];
+return v1[0]<v2[0];
+}
+
+vector<vector<int>> solve(vector<vector<int>>& intervals) {
+    
+    sort(intervals.begin(),intervals.end(),mycmp);
+    
+    int sz=intervals.size(),i;
+    vector<vector<int>> rvec;
+    int fs=1e9+7,ls=-1;
+    for(i=0;i<sz-1;i++)
+    {
+        vector<int> curr=intervals[i];
+        vector<int> next=intervals[i+1];
+               
+        // cout<<curr[0]<<' '<<curr[1]<<'\n';
+        if(curr[1]>=next[0] )
+        {
+            vector<int> newv={curr[0],max(curr[1],next[1])};
+            intervals[i+1]=newv;  //if interval merges merge it
+        }
+       else  //interval breaks then push the most recent merge
+       {
+           fs=min(fs,curr[0]);
+        ls=max(ls,curr[1]);
+           rvec.push_back(intervals[i]);
+       }
+  
+        
+    }
+    vector<int> v1=intervals[sz-1];  //checking for last interval
+    if(!(v1[0]>=fs && v1[1]<=ls))
+    rvec.push_back(intervals[sz-1]);
+    return rvec;
+}
